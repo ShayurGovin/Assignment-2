@@ -8,7 +8,7 @@ model = tf.keras.models.load_model('neural_network_model.h5')
 scaler = joblib.load('scaler.pkl')
 
 # Load test data
-test_data = pd.read_csv('traindata.txt', header=None)
+test_data = pd.read_csv('testdata.txt', header=None)
 
 # Preprocess the test data using the loaded scaler
 test_data_scaled = scaler.transform(test_data)
